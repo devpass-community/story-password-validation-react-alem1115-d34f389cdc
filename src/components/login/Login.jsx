@@ -8,8 +8,12 @@ const initialState = {
 };
 
 export const validatePassword = (password) => {
-  // TODO
-  return false;
+  var re = new RegExp(/^\d{6}$/)
+  if (re.test(password)){
+    return true
+  } else {
+return false
+  }
 };
 
 const Login = () => {
